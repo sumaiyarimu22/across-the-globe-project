@@ -46,8 +46,8 @@
   bottom: 0;
 }
 .modal {
-  width: 40rem;
-  height: 25rem;
+  width: 50rem;
+  height: 28rem;
 
   position: fixed;
   top: 50%;
@@ -66,5 +66,14 @@
   color: #008a45;
 }
 .small-text {
-  font-size: 10px;
+  font-size: 12px;
+}
+
+.login-input {
+  border: 1px solid #d9d9db;
+  color: #8a8a8a;
+  padding: 0.5rem;
+}
+.border-light {
+  border: 2px solid #8a8a8a;
 }

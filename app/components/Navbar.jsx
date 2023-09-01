@@ -3,7 +3,7 @@
 import { AiOutlineSearch } from "react-icons/ai";
 
 import { BiSolidDownArrow } from "react-icons/bi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import logoImage from "public/whole.png";
 import Form from "./PopupForm";
@@ -11,6 +11,15 @@ import Form from "./PopupForm";
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+
+  useEffect(() => {
+    if (isModalOpen) {
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = "scroll";
+      };
+    }
+  }, [isModalOpen]);
 
   const handleSignIn = () => {
     setIsModalOpen(true);
